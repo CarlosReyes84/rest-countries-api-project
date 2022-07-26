@@ -28,6 +28,7 @@ My first project with React :) 1 month of learning
 
 - React JS
 
+### Cool Stuff
 - [React](https://react-icons.github.io/react-icons/) - React Icons
 
 
