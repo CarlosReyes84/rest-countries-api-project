@@ -1,8 +1,8 @@
 import { Link } from "wouter"
 
-export const Country = ({ flag, name, population, region, capital }) => {
+export const Country = ({ flag, name, population, region, capital, cca3 }) => {
     return (
-            <Link to={name}>
+            <Link to={cca3}>
                 <a className="anchor">
                     <div className="country">
                             <div className="country-image">

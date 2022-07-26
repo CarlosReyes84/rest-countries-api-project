@@ -35,6 +35,7 @@ export const Countries = ({data, loading, search, region1 }) => {
               population={population}
               region={region}
               capital={capital}
+              cca3={country.cca3}
             />
           );
         })}

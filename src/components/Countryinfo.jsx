@@ -3,11 +3,10 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { IconContext } from "react-icons";
 
 export const Countryinfo = ({ param, data }) => {
-  const { country1 } = param;
-  const clearCountry = country1.replace(/%20/g, " ");
-  const filterPerName = data.filter(
-    (country) => country.common === clearCountry
-  );
+  const { country1 } = param; // ==> 'GTM'
+  
+  const filterPerName = data.filter((country) => country.cca3 === country1);
+
   return (
     <div className="country-info1 container">
       <IconContext.Provider value={{ className: "arrow-left" }}>
