@@ -124,9 +124,9 @@ function makeItVisible(borders, data) {
   })
   
 
-  return save.map(({common}) => {
+  return save.map(({cca3, common}) => {
     return (
-        <Link to={common} key={common}>
+        <Link to={cca3} key={cca3}>
           <a>
             <button className="borderChild" type="button">
                 <p>{common}</p>
