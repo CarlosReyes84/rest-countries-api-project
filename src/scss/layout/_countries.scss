@@ -1,0 +1,76 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+
+.countries {
+    .countries-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 7rem;
+        justify-items: center;
+    }
+    .country {
+        cursor: pointer;
+        width: 300px;
+        background-color: #fff;
+        border-radius: .5rem;
+        overflow: hidden;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        .country-image {
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 20vh;
+                object-fit: cover;
+            }
+        }
+        .country-info {
+            padding: 2rem;
+            a {
+                font-size: 2rem;
+                text-decoration: none;
+                color: #000;
+                font-weight: bold;
+                &:hover {
+                    color: rgba(0, 0, 0, 0.5);
+                }
+            }
+            p {
+                font-size: 1.5rem;
+            }
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}
+#dark .country {
+    background-color: $DarkBlue;
+    .country-info {
+        color: white;
+        a {
+            color: $White;
+        }
+    }
+}
+.loading {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+        font-size: 3.5rem;
+    }
+    .spinner {
+        animation-name: rotate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    
+}
+
+
+@keyframes rotate{
+    from{ transform: rotate(-360deg); }
+    to{ transform: rotate(360deg); }
+}

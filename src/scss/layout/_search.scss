@@ -1,0 +1,90 @@
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+
+.search {
+  padding: 5rem 0rem;
+  .container-search {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input {
+      padding: 1rem;
+      width: 35%;
+      background-color: #fff;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      font-size: 1.7rem;
+      border: none;
+    }
+    button {
+      position: relative;
+      padding: 1.2rem 5rem 1.2rem 2rem;
+      cursor: pointer;
+      background-color: #fff;
+      border: none;
+      font-size: 1.4rem;
+      border-radius: 5px;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      .arrow {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+      }
+    }
+    .regions {
+      position: absolute;
+      right: 0;
+      bottom: -210px;
+      padding: 1.2rem 5rem 1.2rem 2rem;
+      background-color: #fff;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      width: 9.7rem;
+      border-radius: 5px;
+      p {
+        font-size: 1.4rem;
+        cursor: pointer;
+        &:hover {
+          color: gray;
+        }
+      }
+    }
+  }
+  @include phone-only {
+    .container-search {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4rem;
+      input {
+        width: 100%;
+        box-sizing: border-box;
+      }
+      button {
+        padding: 1rem 5rem 1rem 1rem;
+        .arrow {
+          top: 13px;
+        }
+      }
+      .regions {
+        left: 0;
+      }
+      .regions {
+        padding: 1rem 5rem 1rem 1rem;
+      }
+    }
+  }
+}
+#dark .search {
+  input {
+    background-color: $DarkBlue;
+    color: $White;
+  }
+  button {
+    background-color: $DarkBlue;
+    color: $White;
+  }
+  .regions {
+    background-color: $DarkBlue;
+    color: $White;
+  }
+}

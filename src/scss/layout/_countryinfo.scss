@@ -1,0 +1,151 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.country-info1 {
+    height: 800px;
+    .button-back {
+        position: relative;
+        font-size: 2rem;
+        cursor: pointer;
+        margin: 5rem 0rem;
+        padding: 0.5rem 3rem 0.5rem 6rem;
+        border-radius: 0.5rem;
+        border: none;
+        background-color: #fff;
+        box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.2);
+        @include tablet-only {
+            margin-bottom: 0rem;
+        }
+        .arrow-left {
+            position: absolute;
+            left: 15px;
+            top: 8px;
+        }
+    }
+    .information {
+        display: flex;
+        gap: 10rem;
+        align-items: center;
+        .country-image {
+            img {
+                width: 600px;
+                height: 400px;
+                object-fit: contain;
+            }
+        }
+        .text-country {
+            h1 {
+                font-size: 2.5rem;
+                font-weight: bold;
+                margin-bottom: 2rem;
+                @include phone-only {
+                    font-size: 2rem;
+                }
+            }
+            .text-information {
+                display: flex;
+                gap: 10rem;
+                .first {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    p {
+                        font-size: 1.7rem;
+                        margin: 0rem;
+                        color: $DarkGray;
+                        span {
+                            color: #000;
+                        }
+                        @include phone-only {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+                .second {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    p {
+                        font-size: 1.7rem;
+                        margin: 0rem;
+                        color: $DarkGray;
+                        span {
+                            color: #000;
+                        }
+                        @include phone-only {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+                @include tablet-only {
+                    flex-direction: column;
+                    gap: 4rem;
+                }
+            }
+        }
+        .borders {
+            margin-top: 4rem;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            p {
+                font-size: 1.7rem;
+                margin: 0rem;
+                @include phone-only {
+                    font-size: 1.5rem;
+                }
+            }
+            .border {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                height: 3rem;
+                .borderChild {
+                    margin: auto;
+                    padding: 0rem 2rem;
+                    box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.2);
+                    padding: 0.5rem 3rem;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    p {
+                        margin: 0;
+                        font-size: 1.3rem;
+                        color: $DarkGray;
+                    }
+                }
+                @include tablet-only {
+                    gap: .5rem;
+                }
+            }
+            @include tablet-only {
+                flex-direction: column;
+                gap: 2rem;
+                align-items: flex-start;
+                margin-bottom: 5rem;
+            }
+        }
+        @include tablet-only {
+            flex-direction: column;
+            gap: 0rem;
+            align-items: flex-start;
+        }
+    }
+    @include tablet-only {
+        height: auto;
+    }
+}
+#dark .country-info1 {
+    color: $White;
+    p {
+        color: #fff;
+    }
+    span {
+        color: #fff;
+        font-weight: bold;
+    }
+    .button-back {
+        background-color: $DarkBlue;
+        color: $White;
+    }
+}
