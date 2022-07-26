@@ -19,13 +19,13 @@ Users should be able to:
 
 
 ### Links
-- Live Site URL: [Pending...](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://carlosreyes84-restcountries.netlify.app/)
 
 ## My process
 My first project with React :) 1 month of learning
 
 ### Built with
-
+- Vite
 - React JS
 
 ### Cool Stuff
