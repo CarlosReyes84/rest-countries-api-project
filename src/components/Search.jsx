@@ -23,7 +23,7 @@ export const Search = (({data, loading}) => {
 
     return (
         <>
-            <div className="search">
+            <nav className="search">
                 <div className="container container-search">
                     <input
                     type="text"
@@ -47,7 +47,7 @@ export const Search = (({data, loading}) => {
                     ))}
                     </div>
                 </div>
-            </div>
+            </nav>
 
 
             <Countries data={data} loading={loading} search={search} region1={region1} />

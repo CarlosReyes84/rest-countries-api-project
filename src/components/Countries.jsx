@@ -23,7 +23,7 @@ export const Countries = ({data, loading, search, region1 }) => {
   }
 
   return (
-    <div className="countries">
+    <main className="countries">
       <div className="container countries-container">
         {filteredCountries.map((country) => {
           const { common, svg, population, region, capital } = country;
@@ -39,6 +39,6 @@ export const Countries = ({data, loading, search, region1 }) => {
           );
         })}
       </div>
-    </div>
+    </main>
   );
 };

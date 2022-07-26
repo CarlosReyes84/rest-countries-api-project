@@ -12,10 +12,12 @@ export const Countryinfo = ({ param, data }) => {
     <div className="country-info1 container">
       <IconContext.Provider value={{ className: "arrow-left" }}>
         <Link to="/">
-          <button className="button-back">
-            <AiOutlineArrowLeft />
-            Back
-          </button>
+          <a>
+            <button className="button-back" type="button">
+              <AiOutlineArrowLeft />
+              Back
+            </button>
+          </a>
         </Link>
       </IconContext.Provider>
       {filterPerName.map((country) => {
@@ -126,9 +128,11 @@ function makeItVisible(borders, data) {
   return save.map(({common}) => {
     return (
         <Link to={common} key={common}>
-          <button className="borderChild">
-              <p>{common}</p>
-          </button>
+          <a>
+            <button className="borderChild" type="button">
+                <p>{common}</p>
+            </button>
+          </a>
         </Link>
     )
   })
