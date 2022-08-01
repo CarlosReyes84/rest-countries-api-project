@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getResponse } from "../../services/api";
 
 
-export function Usehook() {
+export function UseData() {
 
   const [countries, setcountries] = useState([]);
   const [loading, setloading] = useState(false);
