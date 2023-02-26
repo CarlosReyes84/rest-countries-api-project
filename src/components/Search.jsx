@@ -17,10 +17,6 @@ export const Search = (({data, loading}) => {
         { name: "Oceania", id: 5 },
     ];
     
-    const handleChange = () => {
-        toggle ? setToggle(false) : setToggle(true);
-    }
-
     return (
         <>
             <nav className="search">
@@ -33,7 +29,7 @@ export const Search = (({data, loading}) => {
                     />
             
                     <IconContext.Provider value={{className: "arrow"}}>
-                        <button onClick={handleChange}>
+                        <button onClick={() => setToggle(!toggle)}>
                             Filter by Region
                             <AiOutlineArrowDown />
                         </button>
